@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"numberOfSeats\": 30,\r\n    \"amenities\":[\"Clean water\", \"Two Washroom\"],\r\n    \"hourlyRate\":10000\r\n}",
+					"raw": "{\r\n    \"numberOfSeats\": 100,\r\n    \"amenities\":[\"Clean water\", \"Two Washroom\", \"Free Wifi\", \"Couple lighting\"],\r\n    \"hourlyRate\":100000\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -22,12 +22,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/bookings/rooms",
-					"protocol": "http",
+					"raw": "https://api-task2.onrender.com/bookings/rooms",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api-task2",
+						"onrender",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"bookings",
 						"rooms"
@@ -52,12 +53,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/bookings/rooms/676bb89bed5a93322449dd17/book",
-					"protocol": "http",
+					"raw": "https://api-task2.onrender.com/bookings/rooms/676bb89bed5a93322449dd17/book",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api-task2",
+						"onrender",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"bookings",
 						"rooms",
@@ -75,12 +77,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/bookings/rooms",
-					"protocol": "http",
+					"raw": "https://api-task2.onrender.com/bookings/rooms",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"api-task2",
+						"onrender",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"bookings",
 						"rooms"
@@ -95,6 +98,19 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"url": {
+					"raw": "https://api-task2.onrender.com/bookings/customers",
+					"protocol": "https",
+					"host": [
+						"api-task2",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"bookings",
+						"customers"
+					]
+				},
 				"description": "Tis endpoint will give back all the customers details"
 			},
 			"response": []
@@ -104,6 +120,21 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"url": {
+					"raw": "https://api-task2.onrender.com/bookings/customers/Ashen/bookings",
+					"protocol": "https",
+					"host": [
+						"api-task2",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"bookings",
+						"customers",
+						"Ashen",
+						"bookings"
+					]
+				},
 				"description": "This end point will give back the specific customer booking details"
 			},
 			"response": []
