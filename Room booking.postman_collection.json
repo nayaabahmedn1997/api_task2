@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "d8eb30fc-d825-48d4-839d-bc6a7440646d",
+		"name": "Room booking",
+		"description": "This is the basic API for the hall booking system using **Node.js** and **MongoDB**. Here's how it works:\n\n1. **Create Room**: Add room details with `/rooms` endpoint.\n    \n2. **Book Room**: Book a room by its ID with `/rooms/:roomId/book`.\n    \n3. **List Rooms**: Retrieve all rooms and their booking details with `/rooms`.\n    \n4. **List Customers**: View all customers and their bookings with `/customers`.\n    \n5. **Customer's Booking History**: Get a specific customer's booking history with `/customers/:name/bookings`.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18360558"
+	},
+	"item": [
+		{
+			"name": "Create a room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberOfSeats\": 30,\r\n    \"amenities\":[\"Clean water\", \"Two Washroom\"],\r\n    \"hourlyRate\":10000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/bookings/rooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"bookings",
+						"rooms"
+					]
+				},
+				"description": "This request creates a room for booking"
+			},
+			"response": []
+		},
+		{
+			"name": "Book a room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"customerName\":\"Ashen\",\r\n    \"startTime\":\"2024-12-26T08:41:56+00:00\",\r\n    \"endtime\":\"2024-12-25T08:41:56+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/bookings/rooms/676bb89bed5a93322449dd17/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"bookings",
+						"rooms",
+						"676bb89bed5a93322449dd17",
+						"book"
+					]
+				},
+				"description": "This API endpoind will help you book a room and also creates customer if it dosent exists"
+			},
+			"response": []
+		},
+		{
+			"name": "List all rooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/bookings/rooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"bookings",
+						"rooms"
+					]
+				},
+				"description": "Tis endpoint will give back all the rooms"
+			},
+			"response": []
+		},
+		{
+			"name": "List booking history with customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Tis endpoint will give back all the customers details"
+			},
+			"response": []
+		},
+		{
+			"name": "Specific customer booking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "This end point will give back the specific customer booking details"
+			},
+			"response": []
+		}
+	]
+}
